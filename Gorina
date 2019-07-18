@@ -1,3 +1,5 @@
+This is a test text here
+
 - Login fra internt nett
 ssh -X trondola@gorina1.ux.uis.no
 ssh go16
