@@ -1,4 +1,17 @@
 This is a test text here
+"""
+user.name=Hui Cheng
+user.email=chenghui62000@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/chenghui62000/gorinauis.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+"""
 
 - Login fra internt nett
 ssh -X trondola@gorina1.ux.uis.no
