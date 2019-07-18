@@ -1,0 +1,72 @@
+- Login fra internt nett
+ssh -X trondola@gorina1.ux.uis.no
+ssh go16
+cd /local/home/trondola
+
+
+- Kopier case fra data til cluster
+scp -r STI  trondola@gorina11.ux.uis.no:/local/home/trondola
+
+
+- Se(!) mappa, Finder --> Other Locations --> Recent Servers, evt.:
+sftp://trondola@gorina11.ux.uis.no/local/home/trondola
+
+
+- Vis pågående prosesser
+top (q for å avslutte)
+
+
+- Info om cpu
+lscpu
+
+
+- Info minne
+free -mh
+
+
+Slurm:
+
+- Se køen
+squeue
+
+
+- Info om køen, her finnes navnet på noden
+sinfo
+
+
+- Gi kjøretilatelse for sh-scriptet som settes i case-mappa
+chmod u+x submit.sh
+
+
+- Rediger oppsettet (alloker kraft- en mer kjerne enn decomp)
+vim submit.sh
+i - insert mode
+escape - command mode, om frøset grunnet ctrl+s --> ctrl+q
+:q! - quit and destroy any changes made
+:wq - write changes (save) and quit
+
+
+- Endre decomposeParDict 
+vim system/decomposeParDict  
+
+
+- Send inn jobben til køen
+sbatch submit.sh
+
+
+- Info om jobben
+scontrol show job job_id
+evt. squeue
+
+
+- Drep jobb
+scancel job_id
+
+
+- Se simple-foam-filen
+tail -n 30 log.simpleFoam
+
+
+- logout:
+Ctrl+d
+
