@@ -1,0 +1,2 @@
+# gorinauis
+A note repository. 
