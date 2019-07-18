@@ -1,91 +1,63 @@
-Now we are using hui.cheng@uis.no
-HHH
+------------------------------------------------------------------------------
+LOGIN/LOGOUT AND TRANSFER FILES/FOLDERS
 
->>>>>>>>>>>>>
-This is a test text here
-"""
-user.name=Hui Cheng
-user.email=chenghui62000@gmail.com
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-remote.origin.url=https://github.com/chenghui62000/gorinauis.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.master.remote=origin
-branch.master.merge=refs/heads/master
-
-"""
-
-- Login fra internt nett
-ssh -X trondola@gorina1.ux.uis.no
+- Login 
+ssh -X [USER]@gorina1.ux.uis.no
 ssh go16
-cd /local/home/trondola
 
-
-- Kopier case fra data til cluster
-scp -r STI  trondola@gorina11.ux.uis.no:/local/home/trondola
-
-
-- Se(!) mappa, Finder --> Other Locations --> Recent Servers, evt.:
-sftp://trondola@gorina11.ux.uis.no/local/home/trondola
-
-
-- Vis pågående prosesser
-top (q for å avslutte)
-
-
-- Info om cpu
-lscpu
-
-
-- Info minne
-free -mh
-
-
-Slurm:
-
-- Se køen
-squeue
-
-
-- Info om køen, her finnes navnet på noden
-sinfo
-
-
-- Gi kjøretilatelse for sh-scriptet som settes i case-mappa
-chmod u+x submit.sh
-
-
-- Rediger oppsettet (alloker kraft- en mer kjerne enn decomp)
-vim submit.sh
-i - insert mode
-escape - command mode, om frøset grunnet ctrl+s --> ctrl+q
-:q! - quit and destroy any changes made
-:wq - write changes (save) and quit
-
-
-- Endre decomposeParDict 
-vim system/decomposeParDict  
-
-
-- Send inn jobben til køen
-sbatch submit.sh
-
-
-- Info om jobben
-scontrol show job job_id
-evt. squeue
-
-
-- Drep jobb
-scancel job_id
-
-
-- Se simple-foam-filen
-tail -n 30 log.simpleFoam
-
-
-- logout:
+- Logout:
 Ctrl+d
 
+- Copy case from PC to cluster
+scp -r [LOCAL PATH]  [USER]@gorina11.ux.uis.no:/local/home/[USER]
+
+- Copy case from cluster to PC
+scp -r [USER]@gorina11.uis.no:/local/home/[USER]/[CASE] [LOCAL PATH]
+
+- Alt. GRAPHICALLY view/del./copy to (not from) the cluster
+Finder --> Other Locations --> Connect to Server (alt. Recent Servers):
+sftp://[USER]@gorina11.ux.uis.no/local/home/[USER]
+
+------------------------------------------------------------------------------
+SLURM - WORKLOAD MANAGER
+
+- How to submit job:
+	1: add the submit.sh script to the case folder
+	2: give authority for the script to be editable and executable
+	   > chmod u+x submit.sh
+	3: edit the script (find name of the partition with sinfo)
+	   > vim submit.sh  (i -> make changes -> Esc -> :wq (save and quit) or :q!(quit))
+		3.1: Allocate cores also in the setup of your case if e.g. OpenFOAM:
+		     > vim system/decomposeParDict
+		     NB: allocate n-1 cores, n is number of cores you allocated in the sh-script  
+	4: submit job
+	   > sbatch submit.sh
+	5: Monitor e.g. OpenFOAM simulation
+	   > tail -n 30 log.simpleFoam
+
+- List queue
+squeue
+
+- List nodes and status
+sinfo
+
+- List jobs
+scontrol show jobs
+
+- Cancel job
+scancel job_id
+
+------------------------------------------------------------------------------
+GENERAL SYSTEM MONITORING
+
+- Monitor processes
+top (q to quit)
+htop
+
+- Cpu info
+lscpu
+
+- Memmory info
+free -mh
+
+------------------------------------------------------------------------------
