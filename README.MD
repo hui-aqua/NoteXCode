@@ -1,6 +1,8 @@
 # User Guide for gorina  
 ---  For OpenFoam and Code_Aster ---
 
+The head node, gorina16, is open for SSH from all UiS IP-addresses, access to the other nodes are closed.  Contact [Theodor] <theo@ux.uis.no> if you need direct access to a node for some (debugging?) reason.
+
 ## 1. Login and Logout
 
 - Login 
@@ -75,6 +77,8 @@ source /opt/aster/etc/codeaster/profile.sh
 
 ## 3. Check information
 - List queue ``` squeue ```
+
+Status R means it’s running, PD means pending, i.e. that it’s waiting for available resources.
 - List nodes and status ``` sinfo ```
 - List jobs ``` scontrol show jobs ```
 - Monitor processes ``` top ``` or ```htop```
