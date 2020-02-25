@@ -1,5 +1,5 @@
 # User Guide for gorina  
---For OpenFoam and Code_Aster
+---  For OpenFoam and Code_Aster ---
 
 ## 1. Login and Logout
 
@@ -37,19 +37,18 @@ sftp:// [USER]@gorina1.ux.uis.no/nfs/student/[USER]
 
 - For windows system, you can use [Bitvise SSH Client](https://www.bitvise.com/ssh-client-download). 
 In the login section, fill the following information, and then you can transfer files through the popping out sftp window.
-
+```
 Host: gorina1.ux.uis.no
 
 Port: 22
 
 Username: [USER]
-
+```
 
 ### 2.2 Preparing submit files
-- Add the [submit.sh](https://github.com/hui-aqua/gorinauis/blob/master/submit.sh) script to the case folder
+- Add the [submit.sh](https://github.com/chenghui62000/gorinauis/blob/master/submit.sh) script to the case folder
 - Give authority for the script to be editable and executable
 ```chmod u+x submit.sh ```
-
 
 ### 2.3 Setting enviroment variables
 
@@ -75,34 +74,13 @@ source /opt/aster/etc/codeaster/profile.sh
 - Cancel job ``` scancel job_id ```
 
 ## 3. Check information
-- List queue
-```
-squeue
-```
-- List nodes and status
-```
-sinfo
-```
-- List jobs
-```
-scontrol show jobs
-```
-- Monitor processes
-```
-top 
-```
-- Cpu info
-```
-lscpu
-```
-- Memmory info
-```
-free -mh
-```
-- disk info
-```
-df -h
-```
+- List queue ``` squeue ```
+- List nodes and status ``` sinfo ```
+- List jobs ``` scontrol show jobs ```
+- Monitor processes ``` top ``` or ```htop```
+- Cpu info ``` lscpu ```
+- Memmory info ``` free -mh ```
+- disk info ``` df -h ```
 
 ---
 
