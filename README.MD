@@ -41,14 +41,12 @@ sftp:// [USER]@gorina1.ux.uis.no/nfs/student/[USER]
 In the login section, fill the following information, and then you can transfer files through the popping out sftp window.
 ```
 Host: gorina1.ux.uis.no
-
 Port: 22
-
 Username: [USER]
 ```
 
 ### 2.2 Preparing submit files
-- Add the [submit.sh](https://github.com/chenghui62000/gorinauis/blob/master/submit.sh) script to the case folder
+- Download and add the [submit.sh](https://github.com/chenghui62000/gorinauis/blob/master/submitshell/submit.sh) script to the case folder. More informaion about this shell file can click [here](https://github.com/chenghui62000/gorinauis/tree/master/submitshell)
 - Give authority for the script to be editable and executable
 ```chmod u+x submit.sh ```
 
@@ -78,7 +76,7 @@ source /opt/aster/etc/codeaster/profile.sh
 ## 3. Check information
 - List queue ``` squeue ```
 
-Status R means it’s running, PD means pending, i.e. that it’s waiting for available resources.
+Status ```R``` means it’s running, ```PD``` means pending, i.e. that it’s waiting for available resources.```Q``` means queuing. 
 - List nodes and status ``` sinfo ```
 - List jobs ``` scontrol show jobs ```
 - Monitor processes ``` top ``` or ```htop```
