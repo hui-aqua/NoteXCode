@@ -1,4 +1,4 @@
-## [Note for Gorina cluster (UiS)](./UiS_cluster/gorina.md)
+## [Note for Gorina cluster (UiS)](./UiS_cluster)
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-## [Note or Linux system](./NoteForLinux/README.md)
+## [Note or Linux system](./NoteForLinux)
 
 
 
@@ -14,6 +14,6 @@
 
 
 
-## [Tools for Linux](./ToolsForLinux/README.md)
+## [Tools for Linux](./ToolsForLinux)
 
 
