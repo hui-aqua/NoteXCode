@@ -1,4 +1,4 @@
-## Note for Gorina cluster (UiS)
+## [Note for Gorina cluster (UiS)](./gorinauis/README.MD)
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-## Note or Linux system
+## [Note or Linux system](./NoteForLinux/README.md)
 
 
 
@@ -14,9 +14,6 @@
 
 
 
-## Tools for Linux
+## [Tools for Linux](./ScriptApp/README.md)
 
 
-
-
-file:///home/hui/GitHub/NoteXcode/ToolsForLinux/README.md
