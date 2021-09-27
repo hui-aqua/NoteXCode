@@ -1,0 +1,157 @@
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2019 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+gap_x = -1916,
+]]
+
+conky.config = {
+-- -------windoes setting
+    own_window = true,
+    own_window_colour = 'black',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_type = 'panel',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',
+    background = false,
+-- ---------------------------Position
+    alignment = 'top_left',
+    gap_x = 3646,
+    gap_y = 1,
+    minimum_height = 5,
+    minimum_width = 10,
+    maximum_width=190,
+
+-- ---------------------------Font
+    border_width = 0.1,
+    default_color = 'white',
+    default_outline_color = 'grey',
+    default_shade_color = 'black',
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Montserrat Regular:size=8',
+
+-- -------info update
+    cpu_avg_samples = 1,
+    net_avg_samples = 1,
+    double_buffer = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+
+    stippled_borders = 0,
+    update_interval = 0.5,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false 
+
+}
+
+conky.text = [[${image $HOME/.conky/imgs/uis.png -p 5,2 -s 60x72}
+${alignr}${font Montserrat Bold:size=24}${time %H:%M}${font}
+${voffset 7}
+${alignr}${time %A %d %B %Y}
+$hr
+Run time:${alignr} $color $uptime
+${exec uname} ${exec uname -r} $machine
+Distro:${alignr}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}
+${color1}Hostname: ${color}${alignr}${nodename}
+${font Montserrat Bold:size=10}CPU ${font}$hr
+Frequency:  ${alignr} $freq_g GHz 
+CPU Usage:        ${alignr} $cpu%  
+Processes: $processes  ${alignr} Running: $running_processes 
+${offset 5}Core 1   ${color ff8300}${cpubar cpu1  5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 0' | cut -c17-24}
+${offset 5}Core 2   ${color ff8300}${cpubar cpu2  5, 80}${color FFFDE2} 
+${offset 5}Core 3   ${color ff8300}${cpubar cpu3  5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 1' | cut -c17-24}
+${offset 5}Core 4   ${color ff8300}${cpubar cpu4  5, 80}${color FFFDE2} 
+${offset 5}Core 5   ${color ff8300}${cpubar cpu5  5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 2' | cut -c17-24}
+${offset 5}Core 6   ${color ff8300}${cpubar cpu6  5, 80}${color FFFDE2} 
+${offset 5}Core 7   ${color ff8300}${cpubar cpu7  5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 3' | cut -c17-24}
+${offset 5}Core 8   ${color ff8300}${cpubar cpu8  5, 80}${color FFFDE2} 
+${offset 5}Core 9   ${color ff8300}${cpubar cpu9  5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 4' | cut -c17-24}
+${offset 5}Core 10  ${color ff8300}${cpubar cpu10 5, 80}${color FFFDE2}
+${offset 5}Core 11  ${color ff8300}${cpubar cpu11 5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 5' | cut -c17-24}
+${offset 5}Core 12  ${color ff8300}${cpubar cpu12 5, 80}${color FFFDE2}
+${offset 5}Core 13  ${color ff8300}${cpubar cpu13 5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 6' | cut -c17-24}
+${offset 5}Core 14  ${color ff8300}${cpubar cpu14 5, 80}${color FFFDE2}
+${offset 5}Core 15  ${color ff8300}${cpubar cpu15 5, 80}${color FFFDE2} ${offset 5} ${exec sensors | grep 'Core 7' | cut -c17-24}
+${offset 5}Core 16  ${color ff8300}${cpubar cpu16 5, 80}${color FFFDE2} ${color ff8300}
+${font Montserrat Bold:size=10}Memory ${font}$hr
+RAM: $memperc%  ${alignr}  ${membar 8,110} 
+${alignr} $mem /$memmax 
+Swap: $swapperc% ${alignr} ${swapbar 8,110} 
+${alignr} $swap /$swapmax 
+Buffers:       ${alignr} $buffers 
+Cached:        ${alignr} $cached 
+${color1}
+${font Montserrat Bold:size=10}GPU ${font}$hr
+GPU Temperatures   ${alignr}  ${execi 60 nvidia-settings -query [gpu:0]/GPUCoreTemp -t} °C
+GPU Utilization    ${alignr}  ${exec nvidia-settings -tq GPUUtilization | awk -F '[,= ]' '{ print $2 }'}%
+${color ff8300}
+${font Montserrat Bold:size=10}Disk ${font}$hr
+/ ${fs_used /}/${fs_size /}
+${fs_bar 12 /}
+/home ${fs_used /home}/${fs_size /home}   
+${fs_bar 12 /home}
+/tmp  ${fs_used /tmp}/${fs_size /tmp}   
+${fs_bar 12 /tmp}
+Disk read:    ${alignr}    ${diskio_read}/s 
+$diskiograph_read
+Disk write:   ${alignr}   ${diskio_write}/s 
+$diskiograph_write
+${color1}
+${font Montserrat Bold:size=10}Network ${font}$hr
+${color ff8300}Wired Network $hr${color1}
+LAN IP:         ${alignr} ${addr eno1} 
+LAN MAC:        ${alignr} ${execi 99999 cat /sys/class/net/eno1/address}
+Download        ${alignr} ${downspeed eno1}/s
+${downspeedgraph eno1}
+Upload          ${alignr} ${upspeed eno1}/s
+${upspeedgraph eno1}
+
+Top Processes ${color grey}$hr
+Name          ${alignr} CPU%   MEM%
+${color ff8300}${top name 1} ${alignr}${top cpu 1} ${top mem 1}
+${top name 2} ${alignr}${top cpu 2} ${top mem 2}${color grey}
+${top name 3} ${alignr}${top cpu 3} ${top mem 3}
+${top name 4} ${alignr}${top cpu 4} ${top mem 4}
+${top name 5} ${alignr}${top cpu 5} ${top mem 5}
+${top name 6} ${alignr}${top cpu 6} ${top mem 6}
+${top name 7} ${alignr}${top cpu 7} ${top mem 7}
+${top name 8} ${alignr}${top cpu 8} ${top mem 8}
+${top name 9} ${alignr}${top cpu 9} ${top mem 9}
+]]
+-- ${color ff8300}--------Wireless Network--------${color1}
+-- SSID:  ${alignr} ${wireless_essid wlo1}
+-- IP:    ${alignr} ${addr wlo1}
+-- MAC:   ${alignr} ${wireless_ap wlo1}
+-- Signal          ${alignr} ${wireless_link_qual_perc wlo1}% ${wireless_link_bar 8,40 wlo1}
+-- Download        ${alignr} ${downspeedf wlo1} KiB
+-- ${downspeedgraph wlo1}
+-- Upload          ${alignr}  ${upspeedf wlo1} KiB
+-- ${upspeedgraph wlo1}
