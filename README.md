@@ -1,4 +1,4 @@
-## [Note for Gorina cluster (UiS)](./gorinauis/README.MD)
+## [Note for Gorina cluster (UiS)](./UiS_cluster/gorina.md)
 
 
 
@@ -14,6 +14,6 @@
 
 
 
-## [Tools for Linux](./ToolsForLinux/Conky/README.md)
+## [Tools for Linux](./ToolsForLinux/README.md)
 
 
