@@ -7,15 +7,16 @@
 1. Install Linux system (ref: [wikiHow](https://zh.wikihow.com/%E5%AE%89%E8%A3%85Ubuntu-Linux))
 
    1. Download system image, e.g., [Ubuntu](https://ubuntu.com/), [Linux Mint (19.3)]
-   2. Download [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/)
+   2. Download [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/) or [Rufus](https://rufus.ie/en/)
+   
    3. Make a USB installer (Disk >3GB)
 
    Suggestions for the system installation:
 
-   1. swap=16+GB
-   2. /boot=2+GB
-   3. /=100+GB
-   4. /home=2TB+
+   4. swap=16+GB
+   5. /boot=2+GB
+   6. /=100+GB
+   7. /home=2TB+
 
    
 
