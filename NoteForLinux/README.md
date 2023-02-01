@@ -9,12 +9,11 @@
    1. Download system ISO image. Recommend [Linux Mint (20.3)](https://linuxmint.com/edition.php?id=294) and [Ubuntu Focal](https://releases.ubuntu.com/focal/).
    2. Creat bottable USB drive (Disk >=4 GB).  Recommend [Rufus](https://rufus.ie/en/) maand [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/).
    
-   3. Restart the computer and install the new linux system.
-   >Suggestions for the system installation:\
-   >   swap=16+GB \
-   >   /boot=2+GB\
-   >   /=100+GB \
-   >   /home=2TB+
+   3. Restart the computer and install the new linux system. Suggestions for the system installation:
+      >   swap=16+GB \
+      >   /boot=2+GB\
+      >   /=100+GB \
+      >   /home=2TB+
 
    
 
@@ -32,24 +31,14 @@
 ### 4. Install small useful tools
 
    ```shell
-   sudo apt-get install tmux conky python3 kazam python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin
+   sudo apt-get install vlc tmux conky python3 kazam python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin libfl-dev
    ```  
-
-   Some of the tools has to be installed manually.
-
-   - Sublime
-   - VSCode
-   - Chrome
-   - Blender
-   - Typora
-   - VLC player
-   - Kazam
-   - Teamviewer
+   Some of the tools has to be installed manually: [VSCode](https://code.visualstudio.com/download), [Chrome](https://www.google.com/chrome/?platform=linux), [Blender](https://www.blender.org/download/), [Typora](https://typora.io/#linux), [Teamviewer](https://www.teamviewer.com/en/download/linux/)
 
    
 
-### 5. Install [salome_meca](https://code-aster.org/V2/spip.php?article303). Recommend version 2020.0.1.
-   1. Download from the website and unzip the package.
+### 5. Install salome_meca. Recommend version 2020.0.1.
+   1. Download [salome_meca](https://code-aster.org/V2/spip.php?article303) from the website and unzip the package.
       ```
       tar -xvf salome_meca-2020.0.1-1-universal.tgz
       ```
