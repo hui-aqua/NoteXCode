@@ -1,22 +1,20 @@
 # Note for Linux
- A note for the new Linux system.
+ A note for a brand new Linux system.
 
 
 ## Suggestion for the Linux system:
 
 1. Install Linux system (ref: [wikiHow](https://zh.wikihow.com/%E5%AE%89%E8%A3%85Ubuntu-Linux))
 
-   1. Download system image, e.g., [Ubuntu](https://ubuntu.com/), [Linux Mint (19.3)]
-   2. Download [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/) or [Rufus](https://rufus.ie/en/)
+   1. Download system ISO image. Recommend [Linux Mint (20.3)](https://linuxmint.com/edition.php?id=294) and [Ubuntu Focal](https://releases.ubuntu.com/focal/).
+   2. Creat bottable USB drive (Disk >=4 GB).  Recommend [Rufus](https://rufus.ie/en/) maand [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/).
    
-   3. Make a USB installer (Disk >3GB)
-
-   Suggestions for the system installation:
-
-   4. swap=16+GB
-   5. /boot=2+GB
-   6. /=100+GB
-   7. /home=2TB+
+   3. Restart the computer and install the new linux system.
+   >Suggestions for the system installation:\
+   >   swap=16+GB \
+   >   /boot=2+GB\
+   >   /=100+GB \
+   >   /home=2TB+
 
    
 
