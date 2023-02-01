@@ -32,7 +32,7 @@
 ### 4. Install small useful tools
 
    ```shell
-   sudo apt-get install tmux conky python3 kazam python3-numpy vim git python3-matplotlib htop tree pip python3-pip
+   sudo apt-get install tmux conky python3 kazam python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin
    ```  
 
    Some of the tools has to be installed manually.
@@ -87,7 +87,7 @@
    
 
 ### 7. Install OpenFOAM 2012
-   1. Download openfoam main program and third party from  [OpenFoam](https://dl.openfoam.com/source/v2012/ThirdParty-v2012.tgz) and [ThirdParty](https://dl.openfoam.com/source/v2012/OpenFOAM-v2012.tgz).
+   1. Download openfoam main program and third party from  [OpenFoam](https://dl.openfoam.com/source/v2012/OpenFOAM-v2012.tgz) and [ThirdParty](https://dl.openfoam.com/source/v2012/ThirdParty-v2012.tgz).
    2. Fellow [OpenFOAM® Quick Build Guide](https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md) and build the source code. The main steps in the build guide are summarized as:
    3. Move the `ThirdParty-v2012.tgz` and `OpenFOAM-v2012.tgz` to `/opt/openfoam` folder with root admin right.
    4. Unzip the package and source the environment using:
@@ -133,16 +133,14 @@
    ```
    alias of7='source /opt/openfoam7/etc/bashrc'
    alias of1906='source /opt/openfoam/OpenFOAM-v1906/etc/bashrc'
-   alias of2006='source /opt/openfoam/OpenFOAM-v2006/etc/bashrc'
+   alias of2012='source /opt/openfoam/OpenFOAM-v2012/etc/bashrc'
    alias of1812='source /opt/openfoam/OpenFOAM-v1812/etc/bashrc'
    alias of301='source /opt/OpenFOAM/OpenFOAM-3.0.1/etc/bashrc'
    alias of240='source /opt/OpenFOAM/OpenFOAM-2.4.0/etc/bashrc'
    alias ofe40='source /opt/foam/foam-extend-4.0/etc/bashrc'
    alias ofe41='source /opt/foam/foam-extend-4.1/etc/bashrc'
-
    alias of6='source /opt/openfoam6/etc/bashrc'
 
    alias aster='source /opt/aster/etc/codeaster/profile.sh'
-   alias aster144='source /opt/aster144/etc/codeaster/profile.sh'
    alias aqua='source /home/hui/GitCode/Code_Aster/hydromodel/etc/aliases.sh'
    ```
