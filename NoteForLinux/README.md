@@ -18,7 +18,7 @@
 
    
 
-2. Update and upgrade
+2. Log in and Update and upgrade. Select the fastest software source, then use the following commands: 
 
    ```shell
    sudo apt-get update
@@ -32,7 +32,7 @@
 4. Install small useful tools
 
    ```shell
-   sudo apt-get install tmux conky python3 kazam python3-numpy vim git python-pip python3-pip python3-matplotlib
+   sudo apt-get install tmux conky python3 kazam python3-numpy vim git python-pip python3-pip python3-matplotlib htop tree
    ```  
 
    Some of the tools has to be installed manually.
@@ -48,14 +48,33 @@
 
    
 
-5. Install scientific software
-   - pycharm
-   - clion
-   - paraview
-   - [openfoam (6, 2006, 1906)](./Install_OpenFoam.md)
-   - [code_aster](./Install_code_aster.md) 
-   - salome_meca (*note* if it can not open AsterStudy try to open salome_meca use the following comman and see the outcome in terminal:
-  ```sudo /opt/salome_meca/appli_V2019.0.3_universal/salome ``` )
+5. Install [salome_meca](https://code-aster.org/V2/spip.php?article303). Recommend version 2020.0.1.
+   1. Download from the website and unzip the package.\
+      ```
+      tar -xvf salome_meca-2020.0.1-1-universal.tgz
+      ```
+   2. Install using the following command:
+      ```
+      sudo ./salome_meca-2020.0.1-1-universal.run
+      ```
+      Install in the directory: /opt/salome2020 
+
+6. Install Code_aster 14.6
+   1. Install prerequiesites
+   ```
+   sudo apt-get install gcc g++ gfortran cmake python3 python3-dev python3-numpy tk bison flex liblapack-dev libblas-dev libboost-python-dev libboost-numpy-dev zlib1g-dev xterm nedit ddd xemacs21 kwrite gedit gnome-terminal 
+   ```
+
+   Download from the Office website Unzip the package
+
+   ```
+   tar -xvf aster-full-src-14.6.0-1.noarch.tar.gz.tar.gz`
+   ```
+
+
+7. Install OpenFOAM 2012
+   Download [OpenFoam](https://dl.openfoam.com/source/v2012/ThirdParty-v2012.tgz) and [ThirdParty](https://dl.openfoam.com/source/v2012/OpenFOAM-v2012.tgz).
+   
 
 
 ## Useful tips 
