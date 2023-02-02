@@ -31,13 +31,14 @@
 ### 4. Install small useful tools
 
    ```shell
-   sudo apt-get install vlc tmux conky python3 kazam python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin libfl-dev
+   sudo apt-get install vlc tmux conky python python3 kazam python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin libfl-dev 
    ```  
    Some of the tools has to be installed manually: [VSCode](https://code.visualstudio.com/download), [Chrome](https://www.google.com/chrome/?platform=linux), [Blender](https://www.blender.org/download/), [Typora](https://typora.io/#linux), [Teamviewer](https://www.teamviewer.com/en/download/linux/)
 
    
 
 ### 5. Install salome_meca. Recommend version 2020.0.1.
+   **NOTE** Before the installation verify that when you lunch `python` in a terminal, it is <font color="red">Python2</font>
    1. Download [salome_meca](https://code-aster.org/V2/spip.php?article303) from the website and unzip the package.
       ```
       tar -xvf salome_meca-2020.0.1-1-universal.tgz
