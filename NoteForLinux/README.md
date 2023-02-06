@@ -29,7 +29,7 @@
 ### 4. Install small useful tools
 
    ```shell
-   sudo apt-get install vlc tmux conky python python3 kazam python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin libfl-dev 
+   sudo apt-get install vlc tmux conky python python3 kazam python3-numpy vim git paraview python3-matplotlib htop tree pip openmpi-bin libfl-dev 
    ```  
 
    Some of the tools has to be installed manually: [VSCode](https://code.visualstudio.com/download), [Chrome](https://www.google.com/chrome/?platform=linux), [Blender](https://www.blender.org/download/), [Typora](https://typora.io/#linux), [Teamviewer](https://www.teamviewer.com/en/download/linux/)
@@ -103,10 +103,10 @@
    1. Download openfoam main program and third party from  [OpenFoam](https://dl.openfoam.com/source/v2012/OpenFOAM-v2012.tgz) and [ThirdParty](https://dl.openfoam.com/source/v2012/ThirdParty-v2012.tgz).
    2. Fellow [OpenFOAM® Quick Build Guide](https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md) and build the source code. The main steps in the build guide are summarized as:
    3. Move the `ThirdParty-v2012.tgz` and `OpenFOAM-v2012.tgz` to `/opt/openfoam` folder with root admin right.
-   4. Unzip the package and source the environment using:
+   4. Unzip the package and source the environment under the `/opt/openfoam/OpenFOAM-v2012` folder using:
 
       ```shell
-      source ~/openfoam/OpenFOAM-v2012/etc/bashrc
+      source etc/bashrc
       ```
 
    5. Test the system readiness (optional, not supported for cross-compilation)
@@ -162,5 +162,5 @@
    alias of6='source /opt/openfoam6/etc/bashrc'
 
    alias aster='source /opt/aster/etc/codeaster/profile.sh'
-   alias aqua='source /home/hui/GitCode/Code_Aster/hydromodel/etc/aliases.sh'
+   alias salome2020='/opt/salome_meca/appli_V2020.0.1_universal_universal/salome &'
    ```
