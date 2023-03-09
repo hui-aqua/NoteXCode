@@ -101,7 +101,8 @@
 ### 7. Install OpenFOAM 2012
 
    1. Download openfoam main program and third party from  [OpenFoam](https://dl.openfoam.com/source/v2012/OpenFOAM-v2012.tgz) and [ThirdParty](https://dl.openfoam.com/source/v2012/ThirdParty-v2012.tgz).
-   2. Fellow [OpenFOAM® Quick Build Guide](https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md) and build the source code. The main steps in the build guide are summarized as:
+   2. Fellow [OpenFOAM® Quick Build Guide](https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md) and build the source code. I prefer to install in `/opt` with ```sudo su```.
+   
    3. Move the `ThirdParty-v2012.tgz` and `OpenFOAM-v2012.tgz` to `/opt/openfoam` folder with root admin right.
    4. Unzip the package and source the environment under the `/opt/openfoam/OpenFOAM-v2012` folder using:
 
