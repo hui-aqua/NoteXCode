@@ -83,19 +83,19 @@
    3. Install the main program, using the following command in the `aster-full-src-14.6.0` folder
 
       ```shell
-      sudo python3 setup.py install --prefix=/opt/aster
+      sudo python3 setup.py install --prefix=/opt/aster146
       ```
 
    4. Get alias command Add the following to the `~/.bashrc` file, so that you can enter the Code_Aster enviroment and run simulations easily. **Now, the installation for the series version is finished.**
 
       ```shell
-      alias aster='source /opt/aster/etc/codeaster/profile.sh'
+      alias aster='source /opt/aster146/etc/codeaster/profile.sh'
       ```
 
    5. **NOTE**:you can test your installnation with the following command:
 
       ```shell
-      /opt/aster/bin/as_run --test sdnl142a
+      /opt/aster146/bin/as_run --test sdnl142a
       ```
 
 ### 7. Install OpenFOAM 2012
@@ -131,7 +131,7 @@
 ## Useful tips
 
 1. Right click meum
-    - For Linux Mint
+    - For Linux Mint (only for [Cinnamon edition](https://linuxmint.com/edition.php?id=274) )
 
       ```shell
       vi ~/.local/share/nemo/action/vscode.nemo_action
@@ -162,6 +162,6 @@
    alias ofe41='source /opt/foam/foam-extend-4.1/etc/bashrc'
    alias of6='source /opt/openfoam6/etc/bashrc'
 
-   alias aster='source /opt/aster/etc/codeaster/profile.sh'
-   alias salome2020='/opt/salome_meca/appli_V2020.0.1_universal_universal/salome &'
+   alias aster='source /opt/aster146/etc/codeaster/profile.sh'
+   alias salome2020='/opt/salome2020/appli_V2020.0.1_universal_universal/salome &'
    ```
