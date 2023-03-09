@@ -1,3 +1,17 @@
+## ffmpeg
+### creat a video from a series of images (such as from Paraview)
+```shell
+ffmpeg -framerate 30 -i ami.%04d.png output.mp4
+```
+
+
+
+
+
+
+
+
+
 ## [Conky](Conky)
 
 Conky is a free software desktop system monitor. 
