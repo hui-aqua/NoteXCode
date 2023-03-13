@@ -1,8 +1,8 @@
-# How to install Code_Aster
+# How to install OpenFOAM
 
 (ref: [openfoamWiki](http://openfoamwiki.net/index.php/Main_Page))
 
-## OpenFoam v2006 (v1906) (COM version)
+## OpenFoam v2006 (v1906) (.com version)
 1. Download the source code. 
 
 2.  Change to the root user:
@@ -74,12 +74,10 @@
 
 
 
-## OpenFoam5.x
+## Useful function and tips
+1. Search through the turbulenceProperties file in foam tutorials folder, to find one containing the expression kepsilon (case insensitive) :
+      ```shell
+      find $FOAM_TUTORIALS -name "turbulenceProperties" | xargs grep -l -i kepsilon
+      ```
 
-```
-sudo apt install libfl-dev libglu1-mesa-dev libqt4-opengl-dev
-```
-
-
-
-Finish!
+2. 

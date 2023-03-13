@@ -127,6 +127,7 @@
       ```shell
       foamInstallationTest
       ```
+   For other version and more useful tips please find [here](OpenFoam.md)
 
 ## Useful tips
 
