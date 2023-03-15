@@ -80,4 +80,7 @@
       find $FOAM_TUTORIALS -name "turbulenceProperties" | xargs grep -l -i kepsilon
       ```
 
-2. 
+2. Remove all the timeserises data (folders), a quick way to delete all previous timesteps:
+      ```shell
+      foamListTimes -rm
+      ```

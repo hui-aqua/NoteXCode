@@ -29,7 +29,7 @@
 ### 4. Install small useful tools
 
    ```shell
-   sudo apt-get install vlc tmux conky python python3 kazam python3-numpy vim git paraview python3-matplotlib htop tree pip openmpi-bin libfl-dev 
+   sudo apt-get install vlc tmux python python3 python3-numpy vim git python3-matplotlib htop tree pip openmpi-bin libfl-dev 
    ```  
 
    Some of the tools has to be installed manually: [VSCode](https://code.visualstudio.com/download), [Chrome](https://www.google.com/chrome/?platform=linux), [Blender](https://www.blender.org/download/), [Typora](https://typora.io/#linux), [Teamviewer](https://www.teamviewer.com/en/download/linux/)
