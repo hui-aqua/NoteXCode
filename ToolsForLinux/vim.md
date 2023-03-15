@@ -3,13 +3,6 @@
 -- What is [Vim](https://www.vim.org/)
 
 
-## Windows
-
-**ctrl + %**: split vertically
-
-**ctrl + %**: split vertically
-
-
 
 ## Edit
 
