@@ -84,3 +84,21 @@
       ```shell
       foamListTimes -rm
       ```
+3. A pseudo way to reconstruct case on slurm cluster:
+      ``` bash
+      #SBATCH -J recinstru
+      #SBATCH -p cpu20
+      #SBATCH --array=0-19
+      #SBATCH -o output_%j.out
+      #SBATCH -e errors_%j.err
+
+      NUM=$SLURM_ARRAY_TASK_ID
+
+      source /opt/OpenFOAM/.OF2012.bashrc
+      # Source tutorial run functions
+      . $WM_PROJECT_DIR/bin/tools/RunFunctions
+      t_end=1600
+      duration=$t_end/20  # 80
+
+      reconstructPar -time $(($NUM*80)):$(($NUM*80+80)) >log.reconstructPar$NUM
+      ```
