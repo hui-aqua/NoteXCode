@@ -5,17 +5,17 @@
 ### setting your git username and email
 1. open a terminal in anywhere.
 2. Type as:
-      ``` shell
-      git config --global user.name "yourName"
-      git config --global user.email "yourEmail"
-      ```
+    ``` shell
+    git config --global user.name "yourName"
+    git config --global user.email "yourEmail"
+    ```
 ## Generat a ssh key and add to your accound
 
 1. open a terminal in anywhere.
 2. Type as:
-      ``` shell
-        ssh-keygen -t ed25519 -C "your_email@example.com"
-      ```
+    ``` shell
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    ```
 3. At the prompt, type a secure passphrase.
 
     **NOTE:** Must remember this passphras, you will need it later.
@@ -23,11 +23,11 @@
 
     4.1 Start the ssh-agent in the background.      
     ``` shell
-        eval "$(ssh-agent -s)"
+    eval "$(ssh-agent -s)"
     ```
     4.2 Add your SSH private key to the ssh-agent.
     ``` shell
-        ssh-add ~/.ssh/id_ed25519
+    ssh-add ~/.ssh/id_ed25519
     ```
 5. Add the SSH key to your account on GitHub.
 

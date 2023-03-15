@@ -9,7 +9,7 @@ ffmpeg -framerate 30 -i ami.%04d.png output.mp4
 
 ## [vim](vim.md)
 
-
+## [git and GitHub](git.md)
 
 
 ## [Conky](Conky)
