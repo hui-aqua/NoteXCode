@@ -2,6 +2,10 @@
 --
 Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible. 
 
+Useful resources:
+[cheatsheets](https://matplotlib.org/cheatsheets/)
+[Example](https://matplotlib.org/stable/plot_types/index.html)
+[Documentation](https://matplotlib.org/stable/index.html)
 
 ## How to fix "Times New Roman" font in Linux 
 
