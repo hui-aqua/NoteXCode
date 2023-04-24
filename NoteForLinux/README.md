@@ -64,6 +64,29 @@
 
    </details>
 
+
+   <details>
+   <summary>Issue about libffi.so.6:</summary>
+   The FATAL ERROR message is 
+
+   ``` shell
+   ........
+   File "/opt/salome2020/V2020.0.1_universal_universal/prerequisites/Python-365/lib/python3.6/ctypes/__init__.py", line 7, in <module>
+   from _ctypes import Union, Structure, Array
+   ImportError: libffi.so.6: cannot open shared object file: No such file or directory
+   ``` 
+
+   This issue can be fixed by:
+
+   ``` shell
+   cd opt/salome2020/V2019.0.3_universal/prerequisites/debianForSalome/lib
+   sudo apt install libffi7
+   sudo rm libffi.so.6
+   ln -s /usr/lib/x86_64-linux-gnu/libffi.so.7 libffi.so.6              
+   ```
+
+   </details>
+
 ### 6. Install Code_aster 14.6
 
    1. Download [code aster stable version 14.6.0](https://code-aster.org/FICHIERS/aster-full-src-14.6.0-1.noarch.tar.gz) from the Office website Unzip the package
