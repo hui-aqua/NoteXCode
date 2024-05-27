@@ -92,7 +92,7 @@ Download the system ISO image. Recommend [Linux Mint (20.3)](https://linuxmint.c
    1. Download [code aster stable version 14.6.0](https://code-aster.org/FICHIERS/aster-full-src-14.6.0-1.noarch.tar.gz) from the Office website Unzip the package
 
       ``` shell
-      tar -xvf aster-full-src-14.6.0-1.noarch.tar.gz.tar.gz`
+      tar -xvf aster-full-src-14.6.0-1.noarch.tar.gz.tar.gz
       ```
 
    2. Install prerequisites
