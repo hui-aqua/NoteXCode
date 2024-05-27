@@ -109,7 +109,7 @@ Download the system ISO image. Recommend [Linux Mint (20.3)](https://linuxmint.c
       sudo python3 setup.py install --prefix=/opt/aster146
       ```
 
-   4. Get alias command add the following to the `~`/.bashrc` file, so that you can enter the Code_Aster environment and run simulations easily. **Now, the installation for the series version is finished.**
+   4. Get alias command add the following to the `~/.bashrc` file, so that you can enter the Code_Aster environment and run simulations easily. **Now, the installation for the series version is finished.**
 
       ```shell
       alias aster='source /opt/aster146/etc/codeaster/profile.sh'
